@@ -1,10 +1,11 @@
 $(document).ready(function(){
+  var comm = $("tablet-pulldown").click()
   var budget = parseFloat($(".total_budget").find("span").text());
 
-  $(".department input").on("keyup keydown keypress change", function(e){
+  $(".expense input").on("keyup keydown keypress change", function(e){
     var new_budget = budget;
 
-    $(".department input").each(function(){
+    $(".expense input").each(function(){
       var value = ($(this).val());
       if (value !==""){
         value = parseFloat(value);
